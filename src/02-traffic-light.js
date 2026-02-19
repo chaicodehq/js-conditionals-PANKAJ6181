@@ -24,20 +24,22 @@
 export function getTrafficAction(color) {
   // Your code here
   let lowerCase = color.toLocaleLowerCase();
+  let signals;
   switch (lowerCase) {
     case "green":
-      return "GO";
+      signals = "GO";
       break;
     case "yellow":
-      return "SLOW DOWN";
+      signals = "SLOW DOWN";
       break;
     case "red":
-      return "STOP";
+      signals = "STOP";
       break;
     case "flashing red":
-      return "STOP AND PROCEED WITH CAUTION";
+      signals = "STOP AND PROCEED WITH CAUTION";
       break;
     default:
-      return "INVALID SIGNAL";
+      signals = "INVALID SIGNAL";
   }
+  return signals;
 }
