@@ -44,7 +44,7 @@ export function calculateShipping(weight, country, orderTotal) {
     } else if (weight > 5) {
       cost = 15;
     }
-  } else if (country !== "US") {
+  } else {
     if (orderTotal > 100) {
       cost = 0;
     } else if (weight <= 1) {
